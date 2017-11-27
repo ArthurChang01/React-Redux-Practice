@@ -4,26 +4,6 @@
       "id": 1,
       "email": "a@b.c",
       "password": "P@ssw0rd"
-    },
-    {
-      "email": "b@.c.d",
-      "password": "P@ssw0rd",
-      "id": 2
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": 3
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": 4
-    },
-    {
-      "email": "a@b.c",
-      "password": "P@ssw0rd",
-      "id": 5
     }
   ]
 }

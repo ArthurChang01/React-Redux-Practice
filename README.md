@@ -1,7 +1,12 @@
 # React-Redux-Practice
 
-use "npm install" to install all of packages in this project.
+node.js version is 9.2
+npm version is 5.5.1
 
-use "npm start" to run this project, and start a json-server as well.
+Instruction:
+1. Run on local computer: npm start
+2. Compile for production environment: npm run deploy
 
-you can open any browser and enter http://localhost:8080 in navigator bar to view the website.
+*Upgrade to newest packages
+1. Webpack v3
+2. React family: React-Route, Redux, ... 
