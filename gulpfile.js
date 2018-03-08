@@ -10,7 +10,7 @@ gulp.task('NpmDeploy', function(){
 	});
 })
 
-gulp.task('BuildDockerImage',['NpmBuild'],function(){
+gulp.task('BuildDockerImage',['NpmDeploy'],function(){
 	exec('docker build -f Dockerfile -t ellensu/nginxweb:' + args.buildversion +' -t ellensu/nginxweb:latest --rm --no-cache .', function (err,outlog,errlog){
 		console.log(outlog);
 		console.log(errlog);
