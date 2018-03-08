@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    args = require('yargs').argv,
     exec = require('child_process').execSync,
     log = require('fancy-log');
 
@@ -17,7 +18,7 @@ gulp.task('BuildDockerImage',['NpmBuild'],function(){
 })
 
 gulp.task('PushImage',['BuildDockerImage'],function(){
-	exec('docker push localhost:5000/nginxweb:1.0', function (err,outlog,errlog){
+	exec('docker push localhost:5000/nginxweb:' + args.buildversion, function (err,outlog,errlog){
 		console.log(outlog);
 		console.log(errlog);
 	});
