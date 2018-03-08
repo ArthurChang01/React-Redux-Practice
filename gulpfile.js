@@ -29,6 +29,4 @@ gulp.task('PushImage',['BuildDockerImage'],function(){
 })
 
 
-})
-
 gulp.task('Deploy.stg',['PushImage']);
