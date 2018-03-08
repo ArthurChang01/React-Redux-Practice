@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    gulpSSH = require('gulp-ssh'),
     exec = require('child_process').execSync,
     log = require('fancy-log');
 
@@ -27,6 +26,11 @@ gulp.task('PushImage',['BuildDockerImage'],function(){
 		console.log(errlog);
 	});
 })
+//這段是for play-with-docker特別寫的 與實際server ssh不同
+gulp.task('UpdateDockerCompose',['DeleteImage'],function() {
+	exec('cd /docker/');
+	exec('ssh ip172-18-0-16-baga5moo6i4000c49q6g@direct.labs.play-with-docker.com');
+	exec('docker-compose pull web','docker-compose up -d --no-deps --build web');
+})
 
-
-gulp.task('Deploy.stg',['PushImage']);
+gulp.task('Deploy.stg',['UpdateDockerCompose']);
