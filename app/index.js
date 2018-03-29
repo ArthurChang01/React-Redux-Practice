@@ -6,7 +6,9 @@ import registerServiceWorker from './assets/registerServiceWorker'
 
 render(
     <App />,
-    document.getElementById('app'));
+    document.getElementById('app')
+);
+
 registerServiceWorker();
 
 if (process.env.NODE_ENV === 'development')
